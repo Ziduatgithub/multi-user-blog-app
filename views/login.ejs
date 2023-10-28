@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <h3>Login Page</h3>
+        <div style="display: flex;flex-direction: column; gap: 10px;">
+            <label for="email">Email*:
+                <input type="text" name="email" placeholder="email">
+            </label>
+            <label for="password">Password*:
+                <input type="password" name="password" placeholder="password">
+            </label>
+            <button style="width: fit-content;">Submit</button>
+        </div>
+        <a href="register">Register</a>
+        <br>
+        <a href="/dashboard">Dashboard</a>
+    </form>
+</body>
+</html>

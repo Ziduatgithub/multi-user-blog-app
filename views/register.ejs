@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/register" method="post">
+        <h3>Register Page</h3>
+        <div style="display: flex;flex-direction: column; gap: 10px;">
+            <label for="username">Username*:
+                <input type="text" name="username" placeholder="Name">
+            </label>
+            <label for="role">Role:
+                <input type="text" name="role" placeholder="admin/user">
+            </label>
+            <label for="email">Email*:
+                <input type="text" name="email" placeholder="Email">
+            </label>
+            <label for="password">Password*:
+                <input type="text" name="password" placeholder="password">
+            </label>
+            <button style="width: fit-content;">Submit</button>
+        </div>
+        <a href="login">Login</a>
+        <br>
+        <a href="/dashboard">Dashboard</a>
+    </form>
+</body>
+</html>

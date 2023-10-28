@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Blogs</title>
+</head>
+<body>
+    <div class="container">
+        <h3>All Blogs</h3>
+        <a href="/dashboard" class="btn btn-secondary mb-3">Dashboard</a>
+        <form action="/logout" method="post"  style="float: right;cursor: pointer; margin: 10px;">
+            <button>Logout</button>
+        </form> 
+        <% blogs.forEach(blog => {%>
+            <div class="card mb-3 max-height:10%">
+                <div class="card-body">
+                    <div class="card-title">   <h3><%= blog.title %></h3></div>
+                    <p class="text-muted"></ptext-muted>Last apdated: <%= blog.createdAt.toLocaleDateString()%></p>
+                    <p><%= blog.author %></p>
+                    <p><%= blog.content %></p>
+                    <a href="/dashboard/blogs/<%= blog.id %>" class="btn btn-primary " >Learn more</a>
+                    <a href="#" class="btn btn-info mx-4">Edit blog</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        <%})%>;
+    </div>
+</body>
+</html>
